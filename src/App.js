@@ -14,6 +14,9 @@ import { ConfigProvider } from "antd";
 import NewUser from "./User/pages/NewUser";
 import LoginUser from "./User/pages/LoginUser";
 import NotFound from "./NotFound";
+import AssignTask from "./Dashboard/pages/AssignTask";
+import MyTasks from "./Dashboard/pages/MyTasks";
+import AllTasks from "./Dashboard/pages/AllTasks";
 
 function App() {
   const getLocalItem = () => {
@@ -99,6 +102,9 @@ function App() {
             <Route path="/edit/:uid" element={<EditEmployee />} />
             <Route path="/profile/:uid" element={<Profile />} />
             <Route path="/approve-leave" element={<ApproveLeave /> }/>
+            <Route path="/assign-task" element={<AssignTask />} />
+            <Route path="/my-tasks" element={<MyTasks />} />
+            <Route path="/all-tasks" element={<AllTasks />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Router>

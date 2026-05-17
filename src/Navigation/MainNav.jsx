@@ -69,6 +69,26 @@ function MainNav() {
                     navIcon="dashboard"
                     navText="Dashboard"
                   />
+                  {authUser.isSuperUser ? (
+                    <>
+                      <NavLinks
+                        link="/assign-task"
+                        navIcon="task"
+                        navText="Assign Task"
+                      />
+                      <NavLinks
+                        link="/all-tasks"
+                        navIcon="task"
+                        navText="All Tasks"
+                      />
+                    </>
+                  ) : (
+                    <NavLinks
+                      link="/my-tasks"
+                      navIcon="task"
+                      navText="Tasks"
+                    />
+                  )}
                 </>
               )}
             </Nav>

@@ -9,6 +9,7 @@ import {
   FaGithub,
   FaUserCircle,
   FaRegEdit,
+  FaTasks,
 } from "react-icons/fa";
 import { GiCheckMark } from "react-icons/gi";
 import { HiArrowLongRight } from "react-icons/hi2";
@@ -41,6 +42,8 @@ const getIcon = (icon) => {
       return <FaUserCircle className="mb-1 me-3" />;
     case "edit":
       return <FaRegEdit className="mb-1 me-2" />;
+    case "task":
+      return <FaTasks className="mb-1 me-2" />;
     default:
       return;
   }
